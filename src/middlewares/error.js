@@ -1,4 +1,4 @@
-const { ValidationError } = require("joi");
+const { ValidationError } = require('joi');
 
 module.exports = (err, req, res, next) => {
   console.log(err);

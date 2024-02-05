@@ -1,7 +1,7 @@
-const { rateLimit } = require("express-rate-limit");
+const { rateLimit } = require('express-rate-limit');
 
 module.exports = rateLimit({
-  windowMs: 24 * 60 * 60 * 1000,
+  windowMs: 1000 * 60 * 5,
   limit: 100,
-  message: "Too many requests from this IP, please try again after a day",
+  message: { message: 'too many request in a given period' }
 });
